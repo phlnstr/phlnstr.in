@@ -1,2 +1,0 @@
-# phlnstr.in
-Personal Blog
