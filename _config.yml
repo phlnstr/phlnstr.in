@@ -1,0 +1,42 @@
+# ===== Site metadata =====
+title: Field Notes
+subtitle: by phlnstr
+description: Running, hiking, and the thoughts that come with them.
+url: "https://phlnstr.in"
+
+author:
+  name: Abhishek Srivastava
+  handle: phlnstr
+
+# ===== Build settings =====
+permalink: /posts/:title/
+markdown: kramdown
+highlighter: rouge
+
+# ===== Plugins (all whitelisted on GitHub Pages) =====
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# ===== Defaults =====
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: post
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: page
+
+# ===== Exclude from build =====
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor
+  - .gitignore
+  - node_modules

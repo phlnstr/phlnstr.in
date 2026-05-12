@@ -1,0 +1,24 @@
+<header class="site-header">
+  <div class="site-brand">
+    <div class="site-stamp">
+      <svg width="18" height="18" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+        <path d="M2 14L8 4L14 14" stroke="#2d4a3e" stroke-width="1" fill="none"/>
+        <path d="M5 14L8 8L11 14" stroke="#6b9e7a" stroke-width="1" fill="none"/>
+        <line x1="8" y1="4" x2="8" y2="2" stroke="#c25a3c" stroke-width="1.2"/>
+      </svg>
+    </div>
+    <div class="site-title-group">
+      <a href="{{ '/' | relative_url }}" class="site-title">{{ site.title }}</a>
+      <span class="site-subtitle">{{ site.subtitle }}</span>
+    </div>
+  </div>
+  <nav>
+    {%- assign current = page.url -%}
+    {%- assign is_post = false -%}
+    {%- if page.layout == 'post' -%}{%- assign is_post = true -%}{%- endif -%}
+    <a href="{{ '/all-posts.html' | relative_url }}"{% if current == '/all-posts.html' or is_post %} class="active"{% endif %}>all posts</a>
+    <a href="{{ '/now.html' | relative_url }}"{% if current == '/now.html' %} class="active"{% endif %}>now</a>
+    <a href="{{ '/about.html' | relative_url }}"{% if current == '/about.html' %} class="active"{% endif %}>about</a>
+    <a href="{{ '/contact.html' | relative_url }}"{% if current == '/contact.html' %} class="active"{% endif %}>contact</a>
+  </nav>
+</header>
