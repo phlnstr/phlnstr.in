@@ -291,6 +291,8 @@ nav a.active {
   cursor: default;
   text-decoration: none;
   transition: opacity 0.15s ease;
+  background: var(--tag-default-bg);
+  color: var(--tag-default-text);
 }
 
 .tag:hover { opacity: 0.8; }
