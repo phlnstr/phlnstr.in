@@ -288,22 +288,26 @@ nav a.active {
   padding: 2px 10px;
   border-radius: 10px;
   letter-spacing: 0.02em;
-  cursor: default;
+  cursor: pointer;
   text-decoration: none;
-  transition: opacity 0.15s ease;
+  display: inline-block;
+  transition: opacity 0.15s ease, transform 0.15s ease;
   background: var(--tag-default-bg);
   color: var(--tag-default-text);
 }
 
-.tag:hover { opacity: 0.8; }
+.tag:hover {
+  opacity: 0.85;
+  transform: translateY(-1px);
+}
 
-/* Named tag colors */
-.tag-hiking     { background: var(--tag-hiking-bg);     color: var(--tag-hiking-text); }
-.tag-running    { background: var(--tag-running-bg);     color: var(--tag-running-text); }
-.tag-philosophy { background: var(--tag-philosophy-bg);  color: var(--tag-philosophy-text); }
-.tag-trail      { background: var(--tag-trail-bg);       color: var(--tag-trail-text); }
-.tag-thoughts   { background: var(--tag-thoughts-bg);    color: var(--tag-thoughts-text); }
-.tag-default    { background: var(--tag-default-bg);     color: var(--tag-default-text); }
+/* Named tag colors — .tag.tag-X specificity beats global a:hover */
+.tag.tag-hiking     { background: var(--tag-hiking-bg);     color: var(--tag-hiking-text); }
+.tag.tag-running    { background: var(--tag-running-bg);    color: var(--tag-running-text); }
+.tag.tag-philosophy { background: var(--tag-philosophy-bg); color: var(--tag-philosophy-text); }
+.tag.tag-trail      { background: var(--tag-trail-bg);      color: var(--tag-trail-text); }
+.tag.tag-thoughts   { background: var(--tag-thoughts-bg);   color: var(--tag-thoughts-text); }
+.tag.tag-default    { background: var(--tag-default-bg);    color: var(--tag-default-text); }
 
 /* ========================================
    View All Link
