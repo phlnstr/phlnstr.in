@@ -32,6 +32,9 @@ defaults:
     values:
       layout: page
 
+timezone: Asia/Kolkata
+future: true
+
 # ===== Exclude from build =====
 exclude:
   - Gemfile
