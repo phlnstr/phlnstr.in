@@ -1,41 +1,23 @@
 /* ========================================
    FIELD NOTES — Treeline Mail Theme
-   Edit colors here to change the whole site
+   System fonts · flat cards · collapsed palette
    ======================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap');
-
 :root {
-  /* Core palette */
+  /* Core palette — three colors from the logo */
   --green-deep: #2d4a3e;
   --green-sage: #6b9e7a;
   --rust: #c25a3c;
-  --khaki: #7a5c42;
-  --ochre: #d4a03a;
 
   /* Backgrounds */
   --bg: #f8f5f0;
-  --card-bg: #fffdf8;
-  --card-border: #d4ccba;
 
-  /* Text */
+  /* Text — two tones */
   --text: #2a2a1e;
-  --text-light: #7a7a68;
-  --text-faint: #a0a090;
+  --text-light: #6a6a58;
 
-  /* Tag colors */
-  --tag-hiking-bg: #e0ebe4;
-  --tag-hiking-text: #2d4a3e;
-  --tag-philosophy-bg: #f5ddd4;
-  --tag-philosophy-text: #c25a3c;
-  --tag-running-bg: #e8e0d4;
-  --tag-running-text: #7a5c42;
-  --tag-trail-bg: #dde8e0;
-  --tag-trail-text: #3a6b5a;
-  --tag-thoughts-bg: #f0e8d8;
-  --tag-thoughts-text: #8a7a4a;
-  --tag-default-bg: #e8e4dc;
-  --tag-default-text: #5a5a4a;
+  /* Rules & borders */
+  --rule: #c8c0ae;
 
   --max-width: 660px;
 }
@@ -51,19 +33,18 @@
 }
 
 html {
-  font-size: 17px;
+  font-size: 17.5px;
   scroll-behavior: smooth;
 }
 
 body {
-  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-family: Georgia, 'Times New Roman', 'Noto Serif', serif;
   background: var(--bg);
   color: var(--text);
-  line-height: 1.75;
+  line-height: 1.55;
   padding: 2.5rem 1.5rem;
   max-width: var(--max-width);
   margin: 0 auto;
-  -webkit-font-smoothing: antialiased;
 }
 
 /* ========================================
@@ -71,22 +52,21 @@ body {
    ======================================== */
 
 h1, h2, h3 {
-  font-family: 'Cormorant Garamond', Georgia, serif;
-  font-weight: 500;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-weight: normal;
   line-height: 1.3;
   color: var(--text);
 }
 
-h1 { font-size: 1.9rem; margin-bottom: 0.5rem; }
-h2 { font-size: 1.5rem; margin: 2rem 0 0.8rem; }
-h3 { font-size: 1.2rem; margin: 1.5rem 0 0.6rem; }
+h1 { font-size: 1.8rem; margin-bottom: 0.5rem; }
+h2 { font-size: 1.4rem; margin: 2rem 0 0.8rem; }
+h3 { font-size: 1.15rem; margin: 1.5rem 0 0.6rem; }
 
-p { margin-bottom: 1.3rem; }
+p { margin-bottom: 1.2rem; }
 
 a {
   color: var(--rust);
-  text-decoration: none;
-  transition: color 0.2s ease;
+  text-decoration: underline;
 }
 
 a:hover {
@@ -94,7 +74,7 @@ a:hover {
 }
 
 blockquote {
-  border-left: 3px solid var(--green-sage);
+  border-left: 2px solid var(--green-sage);
   padding-left: 1.2rem;
   margin: 1.5rem 0;
   color: var(--text-light);
@@ -103,17 +83,15 @@ blockquote {
 }
 
 code {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 0.82rem;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.85rem;
   background: #ede8df;
-  padding: 0.15rem 0.4rem;
-  border-radius: 3px;
+  padding: 0.1rem 0.35rem;
 }
 
 pre {
   background: #ede8df;
   padding: 1.2rem;
-  border-radius: 6px;
   overflow-x: auto;
   margin: 1.5rem 0;
 }
@@ -122,14 +100,13 @@ pre code { background: none; padding: 0; }
 
 hr {
   border: none;
-  border-top: 1px dashed var(--card-border);
+  border-top: 1px solid var(--rule);
   margin: 2rem 0;
 }
 
 img {
   max-width: 100%;
   height: auto;
-  border-radius: 4px;
   margin: 1.5rem 0;
 }
 
@@ -143,7 +120,7 @@ li { margin-bottom: 0.4rem; }
 .site-header {
   margin-bottom: 2.5rem;
   padding-bottom: 1.5rem;
-  border-bottom: 1px dashed var(--card-border);
+  border-bottom: 1px solid var(--rule);
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -174,9 +151,9 @@ li { margin-bottom: 0.4rem; }
 }
 
 .site-title {
-  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-family: Georgia, 'Times New Roman', serif;
   font-size: 1.35rem;
-  font-weight: 600;
+  font-weight: normal;
   color: var(--green-deep);
   letter-spacing: 0.5px;
   text-decoration: none;
@@ -188,11 +165,10 @@ li { margin-bottom: 0.4rem; }
 }
 
 .site-subtitle {
-  font-family: 'DM Sans', sans-serif;
-  font-size: 0.7rem;
-  color: var(--khaki);
-  letter-spacing: 1px;
-  text-transform: lowercase;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.68rem;
+  color: var(--text-light);
+  letter-spacing: 0.5px;
 }
 
 nav {
@@ -202,20 +178,18 @@ nav {
 }
 
 nav a {
-  font-family: 'DM Sans', sans-serif;
-  font-size: 0.78rem;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.75rem;
   color: var(--text-light);
-  letter-spacing: 0.03em;
   text-decoration: none;
   padding-bottom: 2px;
   border-bottom: 1px solid transparent;
-  transition: all 0.2s ease;
 }
 
 nav a:hover,
 nav a.active {
   color: var(--green-deep);
-  border-bottom-color: var(--green-sage);
+  border-bottom-color: var(--green-deep);
 }
 
 /* ========================================
@@ -223,25 +197,20 @@ nav a.active {
    ======================================== */
 
 .post-card {
-  background: var(--card-bg);
-  border-radius: 4px;
-  padding: 1.2rem 1.3rem;
-  border: 1px dashed var(--card-border);
-  margin-bottom: 1.2rem;
-  transition: border-color 0.2s ease, transform 0.15s ease;
+  padding: 1.2rem 0;
+  border-bottom: 1px solid var(--rule);
 }
 
-.post-card:hover {
-  border-color: var(--green-sage);
-  transform: translateY(-1px);
+.post-card:last-of-type {
+  border-bottom: none;
 }
 
 .post-card-title {
-  font-family: 'Cormorant Garamond', Georgia, serif;
-  font-size: 1.2rem;
-  font-weight: 500;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.15rem;
+  font-weight: normal;
   line-height: 1.3;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.25rem;
 }
 
 .post-card-title a {
@@ -250,14 +219,15 @@ nav a.active {
 }
 
 .post-card-title a:hover {
+  text-decoration: underline;
   color: var(--rust);
 }
 
 .post-card-excerpt {
-  font-size: 0.92rem;
+  font-size: 0.9rem;
   color: var(--text-light);
-  line-height: 1.6;
-  margin-bottom: 0.7rem;
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
 }
 
 .post-card-footer {
@@ -267,9 +237,9 @@ nav a.active {
 }
 
 .post-date {
-  font-family: 'DM Sans', sans-serif;
-  font-size: 0.72rem;
-  color: var(--text-faint);
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.7rem;
+  color: var(--text-light);
 }
 
 /* ========================================
@@ -279,35 +249,23 @@ nav a.active {
 .tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 5px;
+  gap: 6px;
 }
 
 .tag {
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Courier New', Courier, monospace;
   font-size: 0.65rem;
-  padding: 2px 10px;
-  border-radius: 10px;
-  letter-spacing: 0.02em;
-  cursor: pointer;
+  color: var(--text-light);
   text-decoration: none;
-  display: inline-block;
-  transition: opacity 0.15s ease, transform 0.15s ease;
-  background: var(--tag-default-bg);
-  color: var(--tag-default-text);
+  letter-spacing: 0.02em;
 }
+
+.tag::before { content: '['; }
+.tag::after  { content: ']'; }
 
 .tag:hover {
-  opacity: 0.85;
-  transform: translateY(-1px);
+  color: var(--rust);
 }
-
-/* Named tag colors — .tag.tag-X specificity beats global a:hover */
-.tag.tag-hiking     { background: var(--tag-hiking-bg);     color: var(--tag-hiking-text); }
-.tag.tag-running    { background: var(--tag-running-bg);    color: var(--tag-running-text); }
-.tag.tag-philosophy { background: var(--tag-philosophy-bg); color: var(--tag-philosophy-text); }
-.tag.tag-trail      { background: var(--tag-trail-bg);      color: var(--tag-trail-text); }
-.tag.tag-thoughts   { background: var(--tag-thoughts-bg);   color: var(--tag-thoughts-text); }
-.tag.tag-default    { background: var(--tag-default-bg);    color: var(--tag-default-text); }
 
 /* ========================================
    View All Link
@@ -316,16 +274,14 @@ nav a.active {
 .view-all {
   display: inline-block;
   margin-top: 1rem;
-  font-family: 'DM Sans', sans-serif;
-  font-size: 0.82rem;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.78rem;
   color: var(--green-deep);
-  border-bottom: 1px solid var(--green-sage);
-  padding-bottom: 1px;
+  text-decoration: underline;
 }
 
 .view-all:hover {
   color: var(--rust);
-  border-bottom-color: var(--rust);
 }
 
 /* ========================================
@@ -338,50 +294,45 @@ nav a.active {
   gap: 8px;
   align-items: center;
   margin-bottom: 1.8rem;
-  padding: 0.8rem 1rem;
-  background: var(--card-bg);
-  border: 1px dashed var(--card-border);
-  border-radius: 4px;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid var(--rule);
 }
 
 .filter-bar label {
-  font-family: 'DM Sans', sans-serif;
-  font-size: 0.72rem;
-  color: var(--text-faint);
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.7rem;
+  color: var(--text-light);
   letter-spacing: 0.05em;
-  text-transform: uppercase;
+  text-transform: lowercase;
   margin-right: 4px;
 }
 
 .filter-btn {
-  font-family: 'DM Sans', sans-serif;
-  font-size: 0.72rem;
-  padding: 3px 12px;
-  border-radius: 10px;
-  border: 1px solid var(--card-border);
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.7rem;
+  padding: 2px 8px;
+  border: 1px solid var(--rule);
   background: transparent;
   color: var(--text-light);
   cursor: pointer;
-  transition: all 0.15s ease;
 }
 
 .filter-btn:hover {
-  border-color: var(--green-sage);
+  border-color: var(--green-deep);
   color: var(--green-deep);
 }
 
 .filter-btn.active {
   background: var(--green-deep);
-  color: #fff;
+  color: var(--bg);
   border-color: var(--green-deep);
 }
 
 .sort-select {
-  font-family: 'DM Sans', sans-serif;
-  font-size: 0.72rem;
-  padding: 3px 8px;
-  border: 1px solid var(--card-border);
-  border-radius: 4px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.7rem;
+  padding: 2px 6px;
+  border: 1px solid var(--rule);
   background: transparent;
   color: var(--text-light);
   cursor: pointer;
@@ -395,7 +346,7 @@ nav a.active {
 .post-header {
   margin-bottom: 2rem;
   padding-bottom: 1rem;
-  border-bottom: 1px dashed var(--card-border);
+  border-bottom: 1px solid var(--rule);
 }
 
 .post-header h1 {
@@ -403,21 +354,21 @@ nav a.active {
 }
 
 .post-meta {
-  font-family: 'DM Sans', sans-serif;
-  font-size: 0.78rem;
-  color: var(--text-faint);
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.75rem;
+  color: var(--text-light);
   letter-spacing: 0.03em;
   margin-bottom: 0.6rem;
 }
 
 .post-body {
   margin-bottom: 3rem;
-  font-size: 1.05rem;
+  font-size: 1.02rem;
 }
 
 .back-link {
-  font-family: 'DM Sans', sans-serif;
-  font-size: 0.82rem;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.78rem;
   color: var(--text-light);
 }
 
@@ -430,11 +381,11 @@ nav a.active {
    ======================================== */
 
 .page-content {
-  font-size: 1.05rem;
+  font-size: 1.02rem;
 }
 
 .page-content p:first-of-type {
-  font-size: 1.1rem;
+  font-size: 1.05rem;
 }
 
 .page-title {
@@ -452,32 +403,28 @@ nav a.active {
 }
 
 .social-list li {
-  padding: 0.7rem 1rem;
-  background: var(--card-bg);
-  border: 1px dashed var(--card-border);
-  border-radius: 4px;
-  margin-bottom: 0.6rem;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid var(--rule);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  transition: border-color 0.2s ease;
 }
 
-.social-list li:hover {
-  border-color: var(--green-sage);
+.social-list li:last-child {
+  border-bottom: none;
 }
 
 .social-label {
-  font-family: 'DM Sans', sans-serif;
-  font-size: 0.78rem;
-  color: var(--text-faint);
-  text-transform: uppercase;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.72rem;
+  color: var(--text-light);
+  text-transform: lowercase;
   letter-spacing: 0.05em;
 }
 
 .social-link {
-  font-family: 'DM Sans', sans-serif;
-  font-size: 0.88rem;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.82rem;
   color: var(--green-deep);
 }
 
@@ -490,9 +437,9 @@ nav a.active {
    ======================================== */
 
 .now-updated {
-  font-family: 'DM Sans', sans-serif;
-  font-size: 0.75rem;
-  color: var(--text-faint);
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.72rem;
+  color: var(--text-light);
   margin-bottom: 1.5rem;
   letter-spacing: 0.03em;
 }
@@ -504,27 +451,22 @@ nav a.active {
 .site-footer {
   margin-top: 4rem;
   padding-top: 1.5rem;
-  border-top: 1px dashed var(--card-border);
-  font-family: 'DM Sans', sans-serif;
-  font-size: 0.72rem;
-  color: var(--text-faint);
+  border-top: 1px solid var(--rule);
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.7rem;
+  color: var(--text-light);
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.footer-right {
-  font-size: 0.68rem;
-}
-
 .site-footer a {
-  color: var(--text-faint);
-  border-bottom: 1px dotted var(--text-faint);
+  color: var(--text-light);
+  text-decoration: underline;
 }
 
 .site-footer a:hover {
   color: var(--rust);
-  border-bottom-color: var(--rust);
 }
 
 /* ========================================
@@ -532,7 +474,7 @@ nav a.active {
    ======================================== */
 
 @media (max-width: 520px) {
-  html { font-size: 16px; }
+  html { font-size: 16.5px; }
   body { padding: 1.5rem 1rem; }
 
   .site-header {
