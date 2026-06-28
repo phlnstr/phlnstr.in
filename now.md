@@ -10,10 +10,10 @@ permalink: /now.html
 
 This is a [now page](https://nownownow.com/about). It tells you what I'm doing at this point in my life.
 
-Running — Finishing my first 5K in over a year last month. Now training for the Tuffman Delhi Half Marathon on 23 August.
+Running — Finished my first 5K in over a year last month. Now training for the Tuffman Delhi Half Marathon on 23 August.
 
 Hiking — Nothing planned till the half marathon is done. Then something big.
 
-Reading — _Mountains of the Mind_ by Robert Macfarlane.
+Reading — _Mountains of the Mind_ by Robert Macfarlane, _A Visit from the Good Squad_ by Jennifer Egan
 
 PhD — Writing the literature review chapter for my final thesis.
