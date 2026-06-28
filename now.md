@@ -10,7 +10,7 @@ permalink: /now.html
 
 This is a [now page](https://nownownow.com/about). It tells you what I'm doing at this point in my life.
 
-Running — Finishing my first 5K in over a year last month. Now training for the Tuffman Delhi Half Marathon on 23 August. June has been a cruel month with injury and personal distress. Looking to find my way back in July.
+Running — Finishing my first 5K in over a year last month. Now training for the Tuffman Delhi Half Marathon on 23 August.
 
 Hiking — Nothing planned till the half marathon is done. Then something big.
 
